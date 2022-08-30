@@ -16,17 +16,19 @@
         <span class="five"></span>
         <span class="six"></span>
     </div>
-    <div class="container">
-    <button class="btn">+</button>
-    <div class="pack">
-        <h1 class="h1">
-            tech bro take over
-        </h1>
-        <p class="h1">
-            we will pick the color later....i nor know color
-        </p>
-    </div>
-</div>
+    <section class="container">
+        <button id="open" class="btn">+</button>
+    <dialog class="modal__container" id="modal__container">
+      <div class="modal">
+        <h1>Enter your action here:</h1>
+        <div class="modal__form">
+          <input type="text" id="inp" placeholder="play football" />
+          <button type="submit" id="close" class="close">submit</button>
+        </div>
+      </div>
+    </dialog>
+    </section>
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js" integrity="sha512-LTEbTFikHcv/OwMKB2/SeC47wuF/Jxa8b75Bb8FF6QcuoDYuypI8OEIN1Z2IUMnziCtdd7EyjvLIW5Esmenucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script/gsap.js"></script>

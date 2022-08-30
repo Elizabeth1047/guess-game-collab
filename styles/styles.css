@@ -5,18 +5,18 @@
 
 }
 body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
     /* background:url('../img/board-5599231_1280.png') ; */
     background-repeat: no-repeat;
     background-size: cover;
  background-image: linear-gradient(#5CDB95, rgb(2, 5, 32));
  overflow: hidden;
-  box-sizing: border-box;
-  overflow-x: hidden;
+ 
+
+/* css transition boxes-doesnt affect your html or javafile or other element styles */
+  
 }
 .boxs {
   position: absolute;
@@ -71,56 +71,87 @@ body{
   animation-delay: 2.5s;
   transform: scale(1.5);
 }
-/* .bubbles span.nine {
-  animation-delay: 4.5s;
-  transform: scale(2.5);
-}
-.bubbles span.ten {
-  animation-delay: 0.5s;
-  transform: scale(5);
-} */
-.container{
- z-index: 1;
- width: 80%;
- height: 100vh;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- overflow-y: hidden;
- 
+ /* end of background transition */
+
+
+    .container{
+      width: 80%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin:0 auto;
+     z-index: 1;
+    }
+    #open {
+  font-size: 30px;
 }
 
+button {
+  cursor: pointer;
+  background-color: darkcyan;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 25px;
+  
+}
 .btn{
-    border: none;
-    outline: none;
-    background-color: rgb(5, 2, 37);
-    padding: 0px 50px;
-    font-size: 50px;
-    border-radius: 50px;
-    color: #5CDB95;
-    height: 10vh;
-    transform: translateY(-100vh);
-    margin: 0 auto;
-    }
-    .pack{
-      height: 20%;
-      width: 50%;
-      max-width: 200px;
-      background-color: rgb(6, 5, 54);
-      color: white;
-      padding: 30px;
-      text-align: center;
-      transform: translateY(-100vh);
-      
-      
-      
-    }
-     .h1{
-      margin: 10px;
-      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-      opacity: 0;
-      
-      
-    }
-    
+  height: 10%;
+  transform: translateY(-100vh);
+}
+
+/* the modal styling starts here */
+.modal__container {
+  border: 0;
+  border-radius: 30px;
+  box-shadow: -13px 14px 25px 2px;
+  width: 80%;
+  max-width: 450px;
+  margin:  auto;
+}
+.modal__container::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  /* max-width: 100%; */
+  padding: 30px 35px;
+  text-align: center;
+}
+/* ends here */
+/* start of body */
+
+/* the heading in dialog(modal)*/
+h1 {
+  /* margin: 0; */
+  opacity: 0.4;
+}
+/* input in the modal */
+input {
+  padding: 10px;
+  border-radius: 9px;
+}
+
+/* these 2 classes will be added to the elments created in the app.js */
+.action__container {
+  background-color: rgb(79, 129, 79);
+  width: 100px;
+  height: 120px;
+  border-radius: 6px;
+  box-shadow: -13px 10px 25px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action__text {
+  color: #fff;
+  font-size: 25px;
+  text-transform: capitalize;
+}
