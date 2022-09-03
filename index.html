@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
     <div class="boxs">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
-        <span class="five"></span>
-        <span class="six"></span>
+      <span class="one"></span>
+      <span class="two"></span>
+      <span class="three"></span>
+      <span class="four"></span>
+      <span class="five"></span>
+      <span class="six"></span>
     </div>
     <section class="container">
-        <button id="open" class="btn">+</button>
-    <dialog class="modal__container" id="modal__container">
-      <div class="modal">
-        <h1>Enter your action here:</h1>
-        <div class="modal__form">
-          <input type="text" id="inp" placeholder="play football" />
-          <button type="submit" id="close" class="close">submit</button>
+      <button id="open" class="btn">+</button>
+      <dialog class="modal__container" id="modal__container">
+        <div class="modal">
+          <h1>Enter your action here:</h1>
+          <div class="modal__form">
+            <input type="text" id="inp" placeholder="play football" class="inp" />
+            <select name="select" id="select" class="inp" >
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select>
+            <div class="shapes">
+              <div class="triangle shape"></div>
+              <div class="hexagon shape"></div>
+              <div class="circle shape"></div>
+               <div class="star shape"></div>
+                <div class="rectangle shape"></div>
+            </div>
+            <button type="submit" id="close" class="close">submit</button>
+          </div>
         </div>
-      </div>
-    </dialog>
+      </dialog>
     </section>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js" integrity="sha512-LTEbTFikHcv/OwMKB2/SeC47wuF/Jxa8b75Bb8FF6QcuoDYuypI8OEIN1Z2IUMnziCtdd7EyjvLIW5Esmenucg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="script/gsap.js"></script>
-</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js"
+      integrity="sha512-LTEbTFikHcv/OwMKB2/SeC47wuF/Jxa8b75Bb8FF6QcuoDYuypI8OEIN1Z2IUMnziCtdd7EyjvLIW5Esmenucg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script/gsap.js"></script>
+  </body>
 </html>
