@@ -1,22 +1,18 @@
-*{
-    padding: 0;
-    margin: 0;
-   
-
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
+body {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-    /* background:url('../img/board-5599231_1280.png') ; */
-    background-repeat: no-repeat;
-    background-size: cover;
- background-image: linear-gradient(#5CDB95, rgb(2, 5, 32));
- overflow: hidden;
- 
+  /* background:url('../img/board-5599231_1280.png') ; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(#5cdb95, rgb(2, 5, 32));
+  overflow: hidden;
 
-/* css transition boxes-doesnt affect your html or javafile or other element styles */
-  
+  /* css transition boxes-doesnt affect your html or javafile or other element styles */
 }
 .boxs {
   position: absolute;
@@ -71,24 +67,23 @@ body{
   animation-delay: 2.5s;
   transform: scale(1.5);
 }
- /* end of background transition */
+/* end of background transition */
 
-
-    .container{
-      width: 80%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin:0 auto;
-     z-index: 1;
-    }
-    #open {
+.container {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  z-index: 1;
+}
+#open {
   font-size: 30px;
 }
 
-.btn{
+.btn {
   cursor: pointer;
   background-color: darkcyan;
   border: 0;
@@ -104,18 +99,17 @@ body{
 .modal__container {
   border: 0;
   border-radius: 30px;
-  
+
   width: 80%;
   max-width: 450px;
-  margin:  auto;
+  margin: auto;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
- 
 }
 .modal__container::backdrop {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal {
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -123,15 +117,14 @@ body{
   /* max-width: 100%; */
   padding: 30px 35px;
   text-align: center;
-   border-radius: 30px;
- 
+  border-radius: 30px;
 }
 /* the heading in dialog(modal)*/
 h1 {
   /* margin: 0; */
   opacity: 0.4;
 }
-.modal__form{
+.modal__form {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -139,12 +132,11 @@ h1 {
 /* ends here */
 /* start of body */
 
-
 /* input in the modal */
 input {
   padding: 10px;
   border-radius: 9px;
- transform: translateX(-100vw);
+  transform: translateX(-100vw);
 }
 
 /* these 2 classes will be added to the elments created in the app.js */
@@ -164,55 +156,67 @@ input {
   text-transform: capitalize;
 }
 
-select{
+select {
   padding: 10px;
   border-radius: 8px;
   margin-top: 20px;
   transform: translateX(-100vw);
-  
 }
-.shapes{
+.shapes {
   display: flex;
   justify-content: space-around;
   gap: 10px;
   margin-top: 30px;
-  
-} 
-.triangle{
+}
+.shape {
+  cursor: pointer;
+}
+.triangle {
   height: 50px;
   width: 50px;
-  
-   background-color: darkcyan; 
+
+  background-color: darkcyan;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
- }
- .hexagon{
+}
+.hexagon {
   height: 50px;
   width: 50px;
- 
-  background-color: darkcyan; 
+
+  background-color: darkcyan;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.circle{
+.circle {
   height: 50px;
   width: 50px;
- 
-  background-color: darkcyan; 
-   clip-path: circle(50% at 50% 50%);
+
+  background-color: darkcyan;
+  clip-path: circle(50% at 50% 50%);
 }
 
-.star{
+.star {
   height: 50px;
   width: 50px;
-   background-color: darkcyan; 
-  
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: darkcyan;
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
-.rectangle{
+.rectangle {
   height: 50px;
   width: 50px;
- 
-  background-color: darkcyan; 
+
+  background-color: darkcyan;
 }
 .close {
   cursor: pointer;
@@ -224,6 +228,4 @@ select{
   padding: 10px 25px;
   width: 100px;
   margin: 40px auto 0px auto;
-
-  
 }

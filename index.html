@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Desicion maker</title>
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
@@ -22,18 +22,95 @@
         <div class="modal">
           <h1>Enter your action here:</h1>
           <div class="modal__form">
-            <input type="text" id="inp" placeholder="play football" class="inp" />
-            <select name="select" id="select" class="inp" >
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
+            <input
+              type="text"
+              id="inp"
+              placeholder="play football"
+              class="inp"
+            />
+            <select name="select" id="select" class="inp">
+              <option value="1">least important</option>
+              <option value="2">Average</option>
+              <option value="3">Most important</option>
             </select>
             <div class="shapes">
-              <div class="triangle shape"></div>
-              <div class="hexagon shape"></div>
-              <div class="circle shape"></div>
-               <div class="star shape"></div>
-                <div class="rectangle shape"></div>
+              <div class="shape">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 20h18L12 4z" />
+                </svg>
+              </div>
+              <div class="shape">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2l9 4.9V17L12 22l-9-4.9V7z" />
+                </svg>
+              </div>
+              <div class="shape">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+              </div>
+              <div class="shape">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  ></polygon>
+                </svg>
+              </div>
+              <div class="shape">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                </svg>
+              </div>
             </div>
             <button type="submit" id="close" class="close">submit</button>
           </div>
@@ -48,6 +125,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script/gsap.js"></script>
+    <script src="script/gsap.js" defer></script>
+    <script src="/script/app.js" defer></script>
   </body>
 </html>
