@@ -140,7 +140,7 @@ input {
 }
 
 /* these 2 classes will be added to the elments created in the app.js */
-.action__container {
+/* .action__container {
   background-color: rgb(79, 129, 79);
   width: 100px;
   height: 120px;
@@ -154,7 +154,7 @@ input {
   color: #fff;
   font-size: 25px;
   text-transform: capitalize;
-}
+} */
 
 select {
   padding: 10px;
