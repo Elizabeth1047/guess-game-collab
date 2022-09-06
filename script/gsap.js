@@ -40,19 +40,24 @@ const closeModal = document.querySelector("#close");
 const inp = document.querySelector("#inp");
 const select = document.querySelector("#select");
 let shape = document.querySelectorAll(".shape");
-
+let divShape;
 for (let i = 0; i < shape.length; i++) {
   shape[i].addEventListener("click", () => {
     if (shape[i].classList.contains("tri")) {
       console.log("i will create a triangle");
+      divShape = "triangle";
     } else if (shape[i].classList.contains("hex")) {
       console.log("i will create an hexagon");
+      divShape = "hexagon";
     } else if (shape[i].classList.contains("rec")) {
       console.log("i will create a rectangle");
+      divShape = "rectangle";
     } else if (shape[i].classList.contains("star-shape")) {
       console.log("i will create a star");
+      divShape = "star";
     } else if (shape[i].classList.contains("round")) {
       console.log("i will create a cirlce");
+      divShape = "circle";
     }
   });
 }
@@ -62,7 +67,12 @@ openModal.addEventListener("click", () => {
   modal.showModal();
   timeline.play();
 });
-function giveClass(newdiv) {}
+
+function giveClass() {
+  let div = document.createElement("div");
+  div.classList.add(divShape);
+  return div;
+}
 
 function createLi(newdiv) {
   let li = document.createElement("li");
@@ -73,7 +83,7 @@ function createLi(newdiv) {
 closeModal.addEventListener("click", () => {
   modal.close();
   timeline.reverse();
-  let div = document.createElement("div");
+  let div = giveClass();
   let h3 = document.createElement("h3");
   h3.textContent = inp.value;
   div.append(h3);
