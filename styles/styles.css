@@ -229,3 +229,8 @@ select {
   width: 100px;
   margin: 40px auto 0px auto;
 }
+
+/* styling the list */
+.output__container {
+  list-style: none;
+}

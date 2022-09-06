@@ -33,38 +33,50 @@ timeline
   });
 
 //target element
+const output = document.querySelector(".output__container");
 const modal = document.querySelector("#modal__container");
 const openModal = document.querySelector("#open");
 const closeModal = document.querySelector("#close");
 const inp = document.querySelector("#inp");
 const select = document.querySelector("#select");
+let shape = document.querySelectorAll(".shape");
+
+for (let i = 0; i < shape.length; i++) {
+  shape[i].addEventListener("click", () => {
+    if (shape[i].classList.contains("tri")) {
+      console.log("i will create a triangle");
+    } else if (shape[i].classList.contains("hex")) {
+      console.log("i will create an hexagon");
+    } else if (shape[i].classList.contains("rec")) {
+      console.log("i will create a rectangle");
+    } else if (shape[i].classList.contains("star-shape")) {
+      console.log("i will create a star");
+    } else if (shape[i].classList.contains("round")) {
+      console.log("i will create a cirlce");
+    }
+  });
+}
 
 //functinality
-const selected = select.addEventListener("change", () => {
-  const selected = select.value;
-  return selected;
-});
-const inputText = inp.addEventListener("change", () => {
-  const inputText = inp.value;
-  return inputText;
-});
 openModal.addEventListener("click", () => {
   modal.showModal();
   timeline.play();
 });
+function giveClass(newdiv) {}
+
+function createLi(newdiv) {
+  let li = document.createElement("li");
+  li.append(newdiv);
+  return li;
+}
+
 closeModal.addEventListener("click", () => {
   modal.close();
   timeline.reverse();
-
-  // console.log(inp.value);
-  // let action = inp.value;
-  // let div = document.createElement("div");
-  // let h3 = document.createElement("h3");
-  // h3.textContent = action;
-  // console.log(h3);
-  // inp.value = " ";
-
-  // div.append(h3);
-  // div.classList.add("action__container");
-  // h3.classList.add("action__text");
+  let div = document.createElement("div");
+  let h3 = document.createElement("h3");
+  h3.textContent = inp.value;
+  div.append(h3);
+  let li = createLi(div);
+  output.appendChild(li);
 });
