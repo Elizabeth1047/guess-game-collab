@@ -46,16 +46,18 @@ for (let i = 0; i < shape.length; i++) {
     if (shape[i].classList.contains("tri")) {
       console.log("i will create a triangle");
       divShape = "triangle";
-    } else if (shape[i].classList.contains("hex")) {
-      console.log("i will create an hexagon");
-      divShape = "hexagon";
-    } else if (shape[i].classList.contains("rec")) {
+    }
+    //  else if (shape[i].classList.contains("hex")) {
+    //   console.log("i will create an hexagon");
+    //   divShape = "hexagon";}
+    else if (shape[i].classList.contains("rec")) {
       console.log("i will create a rectangle");
       divShape = "rectangle";
-    } else if (shape[i].classList.contains("star-shape")) {
-      console.log("i will create a star");
-      divShape = "star";
-    } else if (shape[i].classList.contains("round")) {
+    }
+    //  else if (shape[i].classList.contains("star-shape")) {
+    //   console.log("i will create a star");
+    //   divShape = "star";}
+    else if (shape[i].classList.contains("round")) {
       console.log("i will create a cirlce");
       divShape = "circle";
     }
@@ -82,7 +84,6 @@ function createLi(newdiv) {
 
 closeModal.addEventListener("click", () => {
   modal.close();
-  timeline.reverse();
   let div = giveClass();
   let h3 = document.createElement("h3");
   h3.textContent = inp.value;

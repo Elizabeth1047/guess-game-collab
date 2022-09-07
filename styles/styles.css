@@ -164,6 +164,7 @@ select {
 }
 .shapes {
   display: flex;
+  
   justify-content: space-around;
   gap: 10px;
   margin-top: 30px;
@@ -247,4 +248,7 @@ select {
   display: flex;
   gap: 10px;
   margin-inline: auto;
+  display: flex;
+ flex-wrap: wrap;
+  z-index: 3;
 }
