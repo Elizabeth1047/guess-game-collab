@@ -172,31 +172,38 @@ select {
   cursor: pointer;
 }
 .triangle {
-  height: 50px;
-  width: 50px;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
 
   background-color: darkcyan;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .hexagon {
-  height: 50px;
-  width: 50px;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
 
   background-color: darkcyan;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .circle {
-  height: 50px;
-  width: 50px;
-
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
   background-color: darkcyan;
   clip-path: circle(50% at 50% 50%);
 }
 
 .star {
-  height: 50px;
-  width: 50px;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
   background-color: darkcyan;
 
   clip-path: polygon(
@@ -213,8 +220,10 @@ select {
   );
 }
 .rectangle {
-  height: 50px;
-  width: 50px;
+  display: grid;
+  place-items: center;
+  height: 200px;
+  width: 200px;
 
   background-color: darkcyan;
 }
@@ -233,4 +242,9 @@ select {
 /* styling the list */
 .output__container {
   list-style: none;
+  margin-top: 14px;
+  width: 95%;
+  display: flex;
+  gap: 10px;
+  margin-inline: auto;
 }
