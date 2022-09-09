@@ -41,6 +41,8 @@ const inp = document.querySelector("#inp");
 const select = document.querySelector("#select");
 let shape = document.querySelectorAll(".shape");
 let divShape;
+let selectedValue = document.querySelector("#select");
+
 for (let i = 0; i < shape.length; i++) {
   shape[i].addEventListener("click", () => {
     if (shape[i].classList.contains("tri")) {
@@ -65,6 +67,10 @@ for (let i = 0; i < shape.length; i++) {
 }
 
 //functinality
+function getSelectedValue() {
+  console.log(selectedValue.value);
+  return selectedValue.value;
+}
 openModal.addEventListener("click", () => {
   modal.showModal();
   timeline.play();
@@ -90,4 +96,14 @@ closeModal.addEventListener("click", () => {
   div.append(h3);
   let li = createLi(div);
   output.appendChild(li);
+});
+
+//decision making
+let storedValues = closeModal.addEventListener("click", () => {
+  let values = [];
+  let selectedValue = getSelectedValue();
+  values.push(selectedValue);
+  //how do i store the values without having to use an eventhandler plus can i return values from an eventhandler
+  console.log(values);
+  return values;
 });
