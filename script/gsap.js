@@ -45,14 +45,14 @@ let selectedValue = document.querySelector("#select");
 
 for (let i = 0; i < shape.length; i++) {
   shape[i].addEventListener("click", () => {
-    if (shape[i].classList.contains("tri")) {
-      console.log("i will create a triangle");
-      divShape = "triangle";
-    }
-    //  else if (shape[i].classList.contains("hex")) {
-    //   console.log("i will create an hexagon");
-    //   divShape = "hexagon";}
-    else if (shape[i].classList.contains("rec")) {
+    // if (shape[i].classList.contains("tri")) {
+    //   console.log("i will create a triangle");
+    //   divShape = "triangle";
+    // }
+    if (shape[i].classList.contains("hex")) {
+      console.log("i will create an hexagon");
+      divShape = "hexagon";
+    } else if (shape[i].classList.contains("rec")) {
       console.log("i will create a rectangle");
       divShape = "rectangle";
     }
@@ -67,10 +67,10 @@ for (let i = 0; i < shape.length; i++) {
 }
 
 //functinality
-function getSelectedValue() {
-  console.log(selectedValue.value);
-  return selectedValue.value;
-}
+// function getSelectedValue() {
+//   console.log(selectedValue.value);
+//   return selectedValue.value;
+// }
 openModal.addEventListener("click", () => {
   modal.showModal();
   timeline.play();
@@ -88,22 +88,22 @@ function createLi(newdiv) {
   return li;
 }
 
+// store values
+function storeValue(importance) {
+  let values = [];
+  let value = importance;
+  values.push(value);
+  console.log(values);
+  return values;
+}
+
 closeModal.addEventListener("click", () => {
   modal.close();
+  storeValue(selectedValue.value);
   let div = giveClass();
   let h3 = document.createElement("h3");
   h3.textContent = inp.value;
   div.append(h3);
   let li = createLi(div);
   output.appendChild(li);
-});
-
-//decision making
-let storedValues = closeModal.addEventListener("click", () => {
-  let values = [];
-  let selectedValue = getSelectedValue();
-  values.push(selectedValue);
-  //how do i store the values without having to use an eventhandler plus can i return values from an eventhandler
-  console.log(values);
-  return values;
 });
